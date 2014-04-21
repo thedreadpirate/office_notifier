@@ -1,0 +1,18 @@
+<html>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js"></script>
+      <script src="index.js"></script>
+    </head>
+    <form ng-submit="submitMessage()">
+      <label>Message</label>
+      <input type="text" name="message" ng-model="newMessage.message">
+      <br />
+      <label>Your name</label>
+      <input type="text" name="name" ng-model="newMessage.from">
+        <button type="submit">Submit!</button>
+    </form>
+    <body ng-app="notifier" ng-controller="listCtrl">
+        <div ng-repeat="item in notifications">{{ item.from }} said: {{ item.message }} at {{ item.date }}</div>
+    </body>
+</html>
