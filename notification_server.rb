@@ -19,6 +19,6 @@ post '/notification' do
   message = JSON.parse(request.body.read)
   puts message
   notifications.push(message)
-  publisher.publish(message.to_s, "all")
+  publisher.publish(message.to_json, "all")
 end
 
