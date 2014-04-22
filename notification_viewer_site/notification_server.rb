@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'json'
-require_relative './queue_interface'
+require_relative '../queue_interface'
 
 notifications = Array.new
 publisher = QueueInterface.new
